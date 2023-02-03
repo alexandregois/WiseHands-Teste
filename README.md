@@ -2,8 +2,11 @@
  WiseHands-Teste
  
  App - Xamarin / Maui
+ 
  Acompanhamento / Análise de erros - AppCenter
- Api (OpenApi/Swagger .Net 6 - Contexto e Model inicial criados através do Comando Scaffold (EntityFrameworkCore) - executado no Nuget Console)
+ 
+ Api (OpenApi/Swagger .Net 6 - Contexto e Model inicial criados através do Comando Scaffold (EntityFrameworkCore) - executado no Nuget Console).
+ 
  Api / Banco de dados Sql Server - servidor - 207.180.246.227 (IIS / SQL).
  
  
