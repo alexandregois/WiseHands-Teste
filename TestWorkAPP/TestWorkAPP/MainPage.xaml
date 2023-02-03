@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestWorkAPP.MainPage">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="55" />
+            <RowDefinition Height="15" />
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <ListView ItemsSource="{Binding Produtos}" x:Name="ListaProdutos" Margin="9" RowHeight="150" Grid.Row="0" Grid.Column="0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical" Margin="7" >
+                            <Label Text="{Binding ProdutoNome, StringFormat='Produto: {0}'}"/>
+                            <Label Text="{Binding Descricao, StringFormat='Descrição: {0}'}"/>
+                            <Label Text="{Binding Valor, StringFormat='Valor (R$): {0}'}"/>
+                            <Label Text="{Binding Desconto, StringFormat='Desconto: {0}%'}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button x:Name="btnChamada"  Grid.Row="1" Grid.Column="0" Margin="15,1" Text="Solicitar chamada" FontSize="18" Clicked="btnChamada_Clicked"></Button>
+
+    </Grid>
+</ContentPage>
