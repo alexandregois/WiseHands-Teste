@@ -10,6 +10,7 @@ using Vonage.Voice;
 using Vonage.Voice.Nccos;
 using Vonage.Voice.Nccos.Endpoints;
 using Vonage.Common;
+using TestWorkAPP.Services;
 
 namespace TestWorkAPP;
 
@@ -37,37 +38,17 @@ public partial class MainPage : ContentPage
         
     }
 
-    private void SolicitarContato()
+    private void btnChamada_Clicked(object sender, EventArgs e)
     {
         try
         {
-            var creds = Credentials.FromAppIdAndPrivateKeyPath("5ccbb9ca-714c-49fd-a2ec-3797237b47fb", "a473038e");
-            var client = new VonageClient(creds);
-
-            var toEndpoint = new PhoneEndpoint() { Number = "5521969364042" };
-            var fromEndpoint = new PhoneEndpoint() { Number = "5521969364042" };
-            var extraText = "";
-            for (var i = 0; i < 50; i++)
-                extraText += $"{i} ";
-            var talkAction = new TalkAction() { Text = "This is a text to speech call from Vonage " + extraText };
-            var ncco = new Ncco(talkAction);
-
-            var command = new CallCommand() { To = new Endpoint[] { toEndpoint }, From = fromEndpoint, Ncco = ncco, EventUrl = EVENT_URL };
-            var response = client.VoiceClient.CreateCall(command);
-
+            SuporteChamada.CriaChamada("5521981724932", "5521969364042");
         }
-        catch (Exception ex)
+        catch (Exception)
         {
-            //AppCenter
-            Crashes.TrackError(ex);
             DisplayAlert("Aviso", "Não foi possível fazer a chamada. Tente mais tarde.", "Ok", " ");
         }
-
-    }
-
-    private void btnChamada_Clicked(object sender, EventArgs e)
-    {
-        SolicitarContato();
+        
     }
 }
 
