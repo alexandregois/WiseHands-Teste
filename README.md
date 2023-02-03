@@ -9,6 +9,9 @@
  
  Api / Banco de dados Sql Server - servidor - 207.180.246.227 (IIS / SQL).
  
+ Url API - http://207.180.246.227:8077/api/produtos
+
+ 
  
  Scaffold-DbContext "Data Source=207.180.246.227;Initial Catalog=TestWork;Persist Security Info=True;User ID=testwork_user;Password=x#SAT@70c9b;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -FORCE
  
