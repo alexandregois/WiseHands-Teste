@@ -16,3 +16,6 @@
  Scaffold-DbContext "Data Source=207.180.246.227;Initial Catalog=TestWork;Persist Security Info=True;User ID=testwork_user;Password=x#SAT@70c9b;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -FORCE
  
  Comunicação App/Api - Biblioteca Refit.
+ 
+ 
+ *** Devido a característica do projeto, feito em MAUI, biblioteca Vonage está apresentando alguns problemas no comportamento.
